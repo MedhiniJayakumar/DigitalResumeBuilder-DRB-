@@ -1,16 +1,9 @@
 package com.drb.pages;
-
-
-
-import java.time.Duration;
-
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class MainClass {
@@ -48,20 +41,6 @@ public void navigation()
 {
 	  driver.navigate().to("http://167.71.226.96/sampleform");
 }
-//public void high() throws InterruptedException 
-//{
-//	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("loading")));
-//	Thread.sleep(1000); // wait for 1 second
-//	WebElement element = driver.findElement(By.xpath("//select[@id='edu_title']"));
-//	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-//	WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
-//	WebElement hs = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@id='edu_title']")));
-//	element.click();
-//	((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
-//    
-//	element.click();
-//}
 public void setDescription()
 {
 WebElement textarea = driver.findElement(By.cssSelector("textarea#yourself"));
@@ -100,10 +79,6 @@ public void createProfile()
 
 public void popup()
 {
-    //WebElement popupMessage = driver.findElement(By.cssSelector("your-css-selector-for-popup-message"));
-//    String popupText = popupMessage.getText();
-//    System.out.println("Popup message:: " + popupText);
-    // Handle the alert dialog
     Alert alert = driver.switchTo().alert();
     String alertText = alert.getText();
     System.out.println("Alert message: " + alertText);
@@ -155,38 +130,6 @@ public void phone(String mob)
 	WebElement ph=driver.findElement(By.xpath("//input[@id='phone']"));
 ph.sendKeys(mob);
 }
-
-//Edit High school.....................................................................................................................................................
-
-//	public void setHsTitle()
-//	{
-//		
-//		WebElement element = driver.findElement(By.xpath("//select[@id='edu_title']"));
-//		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
-//		driver.findElement(By.cssSelector("select[id='edu_title'] option[value='Board of Public Examination']")).click();	
-//	}
-//  
-//
-//	public void setHspercentage(String per)
-//  {
-//      WebElement element=driver.findElement(By.xpath("//input[@id='edu_desc']"));
-//      element.clear();
-//      element.sendKeys(per);
-//  }
-//	
-//	public void setHsSchool(String s)
-//  {
-//      WebElement element=driver.findElement(By.xpath("//input[@id='edu_school']"));
-//      element.clear();
-//      element.sendKeys(s);
-//  }
-//	
-//	public void setHsYear(String yr)
-//  {
-//      WebElement element=driver.findElement(By.xpath("//input[@id='edu_year']"));
-//      element.clear();
-//      element.sendKeys(yr);
-//  }
 public void setEditDescription()
 {
 WebElement textarea = driver.findElement(By.cssSelector("textarea#yourself"));
@@ -222,24 +165,6 @@ public void updateProfile()
 	Actions action = new Actions(driver);
 	action.moveToElement(profile).click().perform();
 }
-//public void updatePopup()
-//{
-//    //WebElement popupMessage = driver.findElement(By.cssSelector("your-css-selector-for-popup-message"));
-//////    String popupText = popupMessage.getText();
-//////    System.out.println("Popup message:: " + popupText);
-//    // Handle the alert dialog
-//    Alert alert = driver.switchTo().alert();
-//    String alertText = alert.getText();
-//    System.out.println("Alert message for profile updation : " + alertText);
-//    alert.accept(); // Close the alert dialog by accepting it
-//}
-//
-//public void navigateToTemplate()
-//{
-//driver.navigate().to("http://167.71.226.96/templatehome");
-//
-//}
-
 public void navigateToTemplate() {
     driver.navigate().to("http://167.71.226.96/templatehome");
     driver.navigate().to("http://167.71.226.96/login");
@@ -265,7 +190,6 @@ public void setLoginFun()
 {
 WebElement login=driver.findElement(By.xpath("//button[@class='login100-form-btn']"));
 login.click();
-//driver.navigate().to("http://167.71.226.96/templatehome");
 }
 public void clickTemplateButton() throws InterruptedException{
 	WebElement templateLink = driver.findElement(By.xpath("//a[@routerlink='templatehome']"));
@@ -276,10 +200,8 @@ public void clickTemplateButton() throws InterruptedException{
     Thread.sleep(1000);
 }
 
-//
 public void selectTemplate() throws InterruptedException{
 WebElement templateElement = driver.findElement(By.xpath("//div[@class='h4' and text()='MULBERRY WHITE']"));
-//templateElement.click();
 Thread.sleep(3000);
 Actions templateActions = new Actions(driver);
 templateActions.moveToElement(templateElement).click().perform();

@@ -17,16 +17,14 @@ public void Login() throws InterruptedException
 	 main.setCheckbox();
 	 main.setLogin();
      main.navigation();
-     //main.high();
      main.setDescription();
-    main.setDescribe("Hardworking");
+     main.setDescribe("Hardworking");
      main.imageChoose("C:\\Users\\Lenovo\\Pictures\\Screenshots\\ADMINDFD.PNG");
      main.tickmark();
      main.createProfile();
      main.popup();
      main.navigateToEdit();
      main.clickOnEdit();
-     
      main.editUsern("COOL");
      main.dob("19");
      main.dob2("10");
@@ -34,17 +32,12 @@ public void Login() throws InterruptedException
      main.gender();
      main.mail("Cool123@gmail.com");
      main.phone("7559078056");
-//     main.setHsTitle();
-//     main.setHspercentage("84");
-//     main.setHsSchool("nss");
-//     main.setHsYear("15");
      main.setEditDescription();
      main.setEditDescribe("Hardworking and intelligent");
      main.editImageChoose("C:\\Users\\Lenovo\\Pictures\\Screenshots\\Screenshot (145).png");
      main.editTickmark();
      main.updateProfile();
     main.navigateToTemplate();
-    // main.updatePopup();
     main.setUsername("COOL");
     main.setPassword("Cool@123");
     main.setCheckbox1();
