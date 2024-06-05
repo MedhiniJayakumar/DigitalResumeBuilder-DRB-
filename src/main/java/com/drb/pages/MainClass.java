@@ -44,7 +44,6 @@ public void navigation()
 public void setDescription()
 {
 WebElement textarea = driver.findElement(By.cssSelector("textarea#yourself"));
-//textarea.click();
 Actions actions = new Actions(driver);
 actions.moveToElement(textarea).click().perform();
 }
