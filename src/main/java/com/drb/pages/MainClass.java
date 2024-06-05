@@ -14,7 +14,7 @@ public MainClass(WebDriver driver)
 {
 	this.driver=driver;
 }
-
+//Test
 public void setUser(String user)
 {
 	WebElement usrname=driver.findElement(By.xpath("//input[@name='Username']"));
