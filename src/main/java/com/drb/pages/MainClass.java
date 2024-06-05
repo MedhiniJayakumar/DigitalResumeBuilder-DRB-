@@ -81,7 +81,7 @@ public void popup()
     Alert alert = driver.switchTo().alert();
     String alertText = alert.getText();
     System.out.println("Alert message: " + alertText);
-    alert.accept(); // Close the alert dialog by accepting it
+    alert.accept(); 
 }
 public void navigateToEdit()
 {
